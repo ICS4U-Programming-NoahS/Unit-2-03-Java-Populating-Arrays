@@ -20,6 +20,16 @@ final class PopulatingArrays {
     public static final int ARRAY_LENGTH = 10;
 
     /**
+     * This is the number of lines.
+     */
+    public static final int LINES = 5;
+
+    /**
+     * This is the minimum number.
+     */
+    public static final int MAX_NUM = 100;
+
+    /**
      * This is a private constructor used to satisfy the
      * style checker.
      *
@@ -48,7 +58,7 @@ final class PopulatingArrays {
 
             // Add a random integer to the array, cast as an integer
             // The random integer is between 0 and 100
-            arrayNum[counter] = (int) (Math.random() * 101);
+            arrayNum[counter] = (int) (Math.random() * (MAX_NUM + 1));
         }
 
         // return the array of numbers
@@ -65,7 +75,7 @@ final class PopulatingArrays {
 
         // Keep adding an array
         // until 5 have been filled
-        for (int line = 0; line < 5; line += 1) {
+        for (int line = 0; line < LINES; line += 1) {
 
             // call the populating arrays function
             int[] arrayNumber = populatingArrays();
